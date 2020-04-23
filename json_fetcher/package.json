@@ -1,0 +1,13 @@
+{
+  "name": "json_fetcher",
+  "version": "1.0.0",
+  "description": "First app with typescript",
+  "main": "index.js",
+  "repository": "https://github.com/DarkSector/typescript-playground",
+  "author": "Pronoy Chopra",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
