@@ -50,3 +50,9 @@ const logNumber: (i: number) => void = (i: number) => {
 }
 
 
+// When to use annotations
+// 1. When a function that returns any type
+// In parsing json, you could get back anything
+const json = '{"x": 10, "y": 20}';
+const coordinates = JSON.parse(json); // Type inference `any`
+console.log(coordinates); //{x: 10, y: 10}
