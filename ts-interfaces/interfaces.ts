@@ -44,9 +44,7 @@ const oldAccord = {
 };
 
 const printVehicleWithInterfaceAndFunction = (vehicle: NewVehicle): void => {
-    console.log(`Name: ${vehicle.name} `);
-    console.log(`Year: ${vehicle.year} `);
-    console.log(`Broken? : ${vehicle.broken} `);
+    console.log(`Summary : ${vehicle.summary()} `);
 };
 
 printVehicleWithInterfaceAndFunction(oldAccord);
