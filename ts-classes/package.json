@@ -1,0 +1,12 @@
+{
+  "name": "ts-classes",
+  "version": "1.0.0",
+  "description": "Classes examples",
+  "main": "index.js",
+  "author": "Pronoy Chopra",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "ts-node": "^8.9.1"
+  }
+}
