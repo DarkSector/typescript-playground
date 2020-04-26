@@ -28,7 +28,7 @@ const printVehicleWithInterface = (vehicle: Vehicle): void => {
 
 printVehicleWithInterface(oldCivic);
 
-
+// An interface with complex type (a function)
 interface NewVehicle {
     name: string;
     year: Date;
@@ -48,3 +48,23 @@ const printVehicleWithInterfaceAndFunction = (vehicle: NewVehicle): void => {
 };
 
 printVehicleWithInterfaceAndFunction(oldAccord);
+
+
+// It isn't necessary to implement everything in an interface
+interface  SimpleVehicle{
+    summary(): string; // a function that takes no arguments and returns a string
+}
+
+const anotherVehicle = {
+    name: 'civic',
+    year: new Date(),
+    broken: true,
+    summary(): string {return `Name: ${this.name}` }
+};
+
+// interface has only one element that needs to be implemented
+const printVehicleWithSimpleVehicleInterface = (vehicle: SimpleVehicle): void => {
+    console.log(`Summary : ${vehicle.summary()} `);
+};
+
+printVehicleWithSimpleVehicleInterface(anotherVehicle);
