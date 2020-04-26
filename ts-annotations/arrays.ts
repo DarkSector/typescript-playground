@@ -25,3 +25,12 @@ carMakers.map(
     return car.toUpperCase();
 });
 
+
+// Flexible types
+// can contain multiple types
+const importantDates: (Date | string)[] = [new Date(), '2030-10-10'];
+importantDates.push("foo");
+importantDates.push(new Date());
+// won't work:-
+//importantDates.push(10)
+
