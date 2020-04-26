@@ -68,3 +68,19 @@ const printSummary = (item: Reportable): void => {
 };
 
 printSummary(anotherVehicle);
+
+
+// this thing has a summary function as well
+const drink = {
+    color: 'brown',
+    carbonated: true,
+    sugar: 40,
+    summary(): string {
+        return `My drink has ${this.sugar} grams of sugar`
+    }
+};
+
+// Which means it is also of the type reportable. i.e. can be used with printSummary
+printSummary(drink);
+
+// a generic interface ties together multiple types of functions
