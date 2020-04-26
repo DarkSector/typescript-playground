@@ -1,0 +1,9 @@
+{
+  "name": "ts-interfaces",
+  "version": "1.0.0",
+  "description": "Some TS interface examples",
+  "main": "index.js",
+  "author": "Pronoy Chopra",
+  "license": "MIT",
+  "private": true
+}
