@@ -4,4 +4,9 @@ const drink = {
     sugar: 40
 };
 
-const pepsi: [string, boolean, number] = ['brown', true, 40];
+// create a type
+type Drink = [string, boolean, number];
+
+// instead of listing it manually
+const pepsi: Drink = ['brown', true, 40];
+const tea: Drink = ['brown', false, 0];
