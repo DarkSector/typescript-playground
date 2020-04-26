@@ -63,8 +63,8 @@ const anotherVehicle = {
 };
 
 // interface has only one element that needs to be implemented
-const printVehicleWithSimpleVehicleInterface = (vehicle: Reportable): void => {
-    console.log(`Summary : ${vehicle.summary()} `);
+const printSummary = (item: Reportable): void => {
+    console.log(`Summary : ${item.summary()} `);
 };
 
-printVehicleWithSimpleVehicleInterface(anotherVehicle);
+printSummary(anotherVehicle);
