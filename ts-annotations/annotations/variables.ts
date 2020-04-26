@@ -45,7 +45,12 @@ let point: { x: number; y: number } = {
 // Function
 // annotation is (i: number) => void
 // holy shit
-const logNumber: (i: number) => void = (i: number) => {
+const logNumber: (i: number) => void = (i) => {
+    console.log(i);
+}
+
+// easier way would be to specify stuff directly in arguments
+const newLogNumber = (i: number): void => {
     console.log(i);
 }
 
