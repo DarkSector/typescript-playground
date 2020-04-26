@@ -27,3 +27,26 @@ const printVehicleWithInterface = (vehicle: Vehicle): void => {
 };
 
 printVehicleWithInterface(oldCivic);
+
+
+interface NewVehicle {
+    name: string;
+    year: Date;
+    broken: boolean;
+    summary(): string; // a function that takes no arguments and returns a string
+}
+
+const oldAccord = {
+    name: 'civic',
+    year: new Date(),
+    broken: true,
+    summary(): string {return `Name: ${this.name}` }
+};
+
+const printVehicleWithInterfaceAndFunction = (vehicle: NewVehicle): void => {
+    console.log(`Name: ${vehicle.name} `);
+    console.log(`Year: ${vehicle.year} `);
+    console.log(`Broken? : ${vehicle.broken} `);
+};
+
+printVehicleWithInterfaceAndFunction(oldAccord);
