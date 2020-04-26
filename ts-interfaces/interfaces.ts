@@ -51,7 +51,7 @@ printVehicleWithInterfaceAndFunction(oldAccord);
 
 
 // It isn't necessary to implement everything in an interface
-interface  SimpleVehicle{
+interface  Reportable{
     summary(): string; // a function that takes no arguments and returns a string
 }
 
@@ -63,7 +63,7 @@ const anotherVehicle = {
 };
 
 // interface has only one element that needs to be implemented
-const printVehicleWithSimpleVehicleInterface = (vehicle: SimpleVehicle): void => {
+const printVehicleWithSimpleVehicleInterface = (vehicle: Reportable): void => {
     console.log(`Summary : ${vehicle.summary()} `);
 };
 
