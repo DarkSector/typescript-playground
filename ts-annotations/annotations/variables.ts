@@ -56,3 +56,34 @@ const logNumber: (i: number) => void = (i: number) => {
 const json = '{"x": 10, "y": 20}';
 const coordinates = JSON.parse(json); // Type inference `any`
 console.log(coordinates); //{x: 10, y: 10}
+
+// Typescript is going to fail at catching errors here
+// coordinates.foobar;
+// because it thinks anything is a fair game
+
+// Better way to do this
+const foobar: {x: number; y: number} = JSON.parse(json);
+
+// 2. When we declare variable on one line and initialize on another
+let words = ['red', 'green', 'blue'];
+let foundWord;
+
+// either use let foundWord: boolean;
+// or use let foundWord = false;
+
+for (let i=0; i < words.length; i++) {
+    if (words[i] === 'green') {
+        foundWord = true;
+    }
+}
+
+// 3. A variable whose type cannot be inferred directly
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > 0) {
+        numberAboveZero = numbers[i]; // won't work without the multiple types declared on #82
+
+    }
+}
