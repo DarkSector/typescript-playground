@@ -1,0 +1,9 @@
+{
+  "name": "ts-annotations",
+  "version": "1.0.0",
+  "description": "Type annotations in typescript",
+  "main": "index.js",
+  "author": "Pronoy Chopra",
+  "license": "MIT",
+  "private": true
+}
