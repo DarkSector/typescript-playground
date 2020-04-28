@@ -1,0 +1,12 @@
+{
+  "name": "maps",
+  "version": "1.0.0",
+  "description": "First app using typescript",
+  "main": "index.js",
+  "author": "Pronoy Chopra",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
