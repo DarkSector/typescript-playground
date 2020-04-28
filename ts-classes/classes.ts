@@ -43,3 +43,17 @@ class VehicleNew {
 
 const vehicle_new = new VehicleNew('orange');
 console.log(vehicle_new.color);
+
+
+class ColoredCar extends VehicleNew {
+    private drive(): void {
+        console.log("colored car drive");
+    }
+
+    constructor(public wheels: number, color: string) {
+        super(color); // requires the super call to the parent
+    }
+}
+
+
+
