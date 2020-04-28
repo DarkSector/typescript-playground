@@ -1,11 +1,23 @@
 import * as faker from 'faker';
+import {Mappable} from "./CustomMap";
+import Map = google.maps.Map;
 
-export class Company {
+export class Company implements Mappable {
     companyName: string;
     catchPhrase: string;
     location: {
         lat: number;
         lng: number;
+    }
+    color = "red";
+
+    markerContent() : string {
+        return `
+            <div>
+                <h1>company name: ${this.companyName}</h1>
+                <h3>catch phrase: ${this.catchPhrase}</h3>
+            </div>
+        `;
     }
 
     constructor() {
