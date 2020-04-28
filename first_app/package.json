@@ -8,5 +8,9 @@
   "private": true,
   "devDependencies": {
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/faker": "^4.1.11",
+    "faker": "^4.1.0"
   }
 }
