@@ -1,7 +1,13 @@
 import {User} from './User';
 import {Company} from "./Company";
 
+// import * as process from "process";
+import {CustomMap} from "./CustomMap"
+
 const user = new User();
 const company = new Company();
-console.log(user);
-console.log(company);
+const googleMap = new CustomMap("map");
+
+googleMap.addMarker(user);
+googleMap.addMarker(company);
+
