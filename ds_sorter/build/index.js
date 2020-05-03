@@ -1,30 +1,9 @@
-var Sorter = /** @class */ (function () {
-    function Sorter(collection) {
-        this.collection = collection;
-    }
-    Sorter.prototype.sort = function () {
-        var length = this.collection.length;
-        for (var i = 0; i < length; i++) {
-            for (var j = 0; j < length - i - 1; j++) {
-                // If collection is an array of numbers
-                if (this.collection instanceof Array) { // this is a type guard
-                    if (this.collection[j] > this.collection[j + 1]) {
-                        var temp = this.collection[j];
-                        this.collection[j] = this.collection[j + 1];
-                        this.collection[j + 1] = temp;
-                    }
-                }
-                // If collection is a string
-                // String are immutable in JS
-                // Strings have chartCodeAt that is used to compare
-                if (typeof this.collection == "string") { // typeof works only for primitives
-                }
-            }
-        }
-    };
-    return Sorter;
-}());
-var sorter = new Sorter([10, 3, -5, 0]);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Sorter_1 = require("./Sorter");
+var NumberCollection_1 = require("./NumberCollection");
+var numbersCollection = new NumberCollection_1.NumberCollection([10, 15, -5, 0]);
+var sorter = new Sorter_1.Sorter(numbersCollection);
 sorter.sort();
-console.log(sorter.collection);
+console.log(numbersCollection.data);
 //# sourceMappingURL=index.js.map
