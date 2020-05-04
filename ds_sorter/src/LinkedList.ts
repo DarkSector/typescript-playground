@@ -1,3 +1,5 @@
+import {Sorter} from "./Sorter";
+
 class LinkedListNode {
     public next: LinkedListNode | null = null;
 
@@ -5,7 +7,7 @@ class LinkedListNode {
     }
 }
 
-export class LinkedList {
+export class LinkedList extends Sorter{
     // starts off empty
     head: LinkedListNode | null = null;
 

@@ -22,7 +22,13 @@ linkedList.add(-10);
 linkedList.add(-3);
 linkedList.add(3);
 
-
-const sorter = new Sorter(linkedList);
-sorter.sort();
+linkedList.sort();
 linkedList.print();
+
+const numbersCollection = new NumberCollection([10, 15, -5, 0]);
+numbersCollection.sort();
+const charactersCollection = new CharactersCollection("yaXios");
+charactersCollection.sort();
+
+console.log(numbersCollection.data);
+console.log(charactersCollection.data);
